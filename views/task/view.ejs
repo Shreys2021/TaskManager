@@ -1,0 +1,16 @@
+<% layout('layout/biolerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">Task Details</h1>
+        <div class="col-md-6 offset-md-3">
+            <div class="task-card">
+                <h3>
+                    <%= task.title %>
+                </h3>
+                <p>
+                    <%= task.description %>
+                </p>
+            </div>
+            <a href="/tasks" class="btn btn-info">Back to All Tasks</a>
+        </div>
+    </div>

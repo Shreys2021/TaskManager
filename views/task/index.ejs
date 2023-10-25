@@ -1,0 +1,23 @@
+<% layout('layout/biolerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">NEW Task</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/AddTask" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" for="TaskTitle">Title</label>
+                    <input class="form-control custom-input" type="text" id="TaskTitle" name="title" required>
+                    <div class="valid-feedback">Looks good</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="TaskDescription">Description</label>
+                    <textarea class="form-control custom-textarea" id="TaskDescription" name="description"
+                        required></textarea>
+                    <div class="valid-feedback">Looks good</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary custom-button">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>

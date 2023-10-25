@@ -1,0 +1,21 @@
+<% layout('layout/biolerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">All Tasks</h1>
+        <div class="col-md-6 offset-md-3">
+            <% tasks.forEach(task=> { %>
+                <div class="task-card">
+                    <h3>
+                        <%= task.title %>
+                    </h3>
+                    <p>
+                        <%= task.description %>
+                    </p>
+                    <a href="/task/<%= task._id %>" class="btn btn-info">View Task</a>
+                    <form action="/task/<%= task._id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger">Delete Task</button>
+                    </form>
+                </div>
+                <% }); %>
+        </div>
+    </div>
